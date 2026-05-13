@@ -29,9 +29,9 @@ export function useResumeAnalyser() {
 
       const response = await fetch('/.netlify/functions/analyse', {
         method: 'POST',
-        // headers: {
-        //   'Content-Type': 'application/json',
-        // },
+        headers: {
+          'Content-Type': 'application/json',
+        },
         body: JSON.stringify({
           contents: [
             {
