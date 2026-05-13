@@ -5,7 +5,7 @@ import { buildMessages, SYSTEM_PROMPT } from '../utils/promptBuilder';
 const API_URL =
   'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent';
 
-const GEMINI_API_KEY = 'AIzaSyDLELucaVhsh8rG2cZmPoekwEq1HPHDLFw';
+// const GEMINI_API_KEY = 'AIzaSyDLELucaVhsh8rG2cZmPoekwEq1HPHDLFw';
 /**
  * Custom hook that encapsulates the full resume-analysis workflow.
  *
@@ -27,11 +27,11 @@ export function useResumeAnalyser() {
       const base64 = await pdfToBase64(file);
       const messages = buildMessages(base64);
 
-      const response = await fetch(`${API_URL}?key=${GEMINI_API_KEY}`, {
+      const response = await fetch('/.netlify/functions/analyse', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        // headers: {
+        //   'Content-Type': 'application/json',
+        // },
         body: JSON.stringify({
           contents: [
             {
