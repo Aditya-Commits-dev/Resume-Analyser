@@ -142,3 +142,5 @@ Please consider giving it a ⭐ on GitHub.
 It motivates me to build more amazing open-source projects!
 
 ---
+
+<img width="364" height="800" alt="image" src="https://github.com/user-attachments/assets/8a052f24-6cd6-4ecf-b262-db10e86edd9d" />
